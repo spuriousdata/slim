@@ -1,0 +1,25 @@
+sslcert:
+  certificate_file: /etc/ssl/certs/slim-combined.pem
+protocols:
+  ldap:
+    factory: slim.protocols.ldap.LdapProtocolFactory
+    port: 10389
+    ssl:
+      port: 10686
+    tls:
+      enable: true
+      force: true
+    allow_anonymous_bind: true
+  http:
+    factory: slim.protocols.http.HttpProtocolFactory
+    port: 1080
+    ssl:
+      port: 10443
+    #transport: tcp
+db:
+  driver: slim.database.sql.postgres.PostgresDriver
+  dbname: slim
+  user: slim
+  password: somelongcomplicatedpassword
+  port: 5432
+  host: localhost
