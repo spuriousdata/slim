@@ -3,7 +3,7 @@ from slim.protocols.mixins import SupportsEncryptionMixin
 
 
 class HttpProtocolFactory(HTTPFactory, SupportsEncryptionMixin):
-    def __init__(self, config, tls_options):
+    def __init__(self, *args):
         super(HttpProtocolFactory, self).__init__()
 
     @property

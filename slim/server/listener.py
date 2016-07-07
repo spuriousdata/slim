@@ -21,7 +21,7 @@ class Listener(object):
             tls_cert_options = co
 
         for proto_config in config.protocols:
-            factory = get_class_from_string(proto_config.factory)(proto_config, tls_cert_options)
+            factory = get_class_from_string(proto_config.factory)(proto_config, tls_cert_options, ssl_cert_options)
 
             if proto_config.ssl and factory.supports_ssl:
                 reactor.listenSSL(proto_config.ssl.port, factory, ssl_cert_options)

@@ -125,7 +125,7 @@ class EncryptedLDAPServer(LDAPServer):
 class LdapProtocolFactory(ServerFactory, SupportsEncryptionMixin):
     protocol = EncryptedLDAPServer
 
-    def __init__(self, cfg, tls_options):
+    def __init__(self, cfg, tls_options, *args):
         self.debug = True
         self.tree = Tree()
         self.root = self.tree.db
