@@ -3,18 +3,18 @@ sslcert:
 protocols:
   ldap:
     factory: slim.protocols.ldap.LdapProtocolFactory
-    port: 10389
+    port: 389
     ssl:
-      port: 10686
+      port: 636
     tls:
       enable: true
       force: true
     allow_anonymous_bind: true
   http:
     factory: slim.protocols.http.HttpProtocolFactory
-    port: 1080
+    port: 80
     ssl:
-      port: 10443
+      port: 443
     #transport: tcp
 db:
   driver: slim.database.sql.postgres.PostgresDriver
