@@ -1,7 +1,7 @@
 ldaptor==16.0.1
 pycrypto==2.6.1
 pyOpenSSL==16.0.0
-Twisted==16.2.0
+Twisted==23.8.0
 PyYAML==3.11
 psycopg2==2.6.1
 service-identity==16.0.0
